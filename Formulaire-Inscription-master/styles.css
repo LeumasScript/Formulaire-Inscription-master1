@@ -1,0 +1,443 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+    list-style: none;
+    outline: none;
+    cursor: pointer;
+    text-decoration: none;
+}
+
+body{
+    background: rgb(202, 202, 202);
+}
+
+.sectionparent{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center; 
+    align-items: center;  
+    min-height: 100vh;
+    background: rgb(202, 202, 202);
+
+}
+
+.sectionparent #checkbox{
+    z-index: 9999;
+    position: absolute;
+    top: 15%;
+    left: 82.5%;
+    transform: translate(-50%,-50%);
+    text-decoration: none;
+    width: 30px;
+    height: 30px;
+    opacity: 0;
+}
+.sectionparent .p0{
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    width: 500px;
+    transform: translate(-50%,-50%);
+    font-size: 20px;
+    color: rgb(255, 255, 255);
+}
+.sectionparent .p0 a{
+    padding: 0 5px;
+    color: rgb(255, 0, 76);
+    text-decoration: none;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+.sectionparent .p01{
+    z-index: 9999;
+    position: absolute;
+    top: 15%;
+    left: 82.5%;
+    transform: translate(-50%,-50%);
+    text-decoration: none;
+    width: 30px;
+    height: 30px;
+    pointer-events: none;
+
+}
+
+.sectionparent .p01 a{
+    font-weight: bold;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    font-size: 20px;
+    text-decoration: none;
+    color: white;
+}
+.sectionparent #checkbox:checked{
+    top: 50%;
+    left: 36.5%;
+    width: 50px;
+    box-shadow: 0px 0px 1px 1px rgba(0, 0, 0, 0.37);
+}
+.sectionparent input:checked ~ section{
+    opacity: 0;
+    pointer-events: none;
+}
+
+.sectionparent input:checked ~ .p01{
+    opacity: 0;
+}
+
+.sectionparent section{
+    border-radius: 10px;
+    background-color: white;
+    width: 70%;
+    height: 80vh;
+    display: inline-flex;
+    overflow: hidden;
+    box-shadow: 0px 0px 15px 7px rgba(102, 154, 184, 0.3);
+    opacity: 1;
+}
+
+.sectionparent section div{
+    height: 100%;
+    width: 100%;
+    background-color: white;
+
+}
+
+.sectionparent section .div1{
+    position: relative;
+    height: 100%;
+    width: 100%;
+    padding: 60px  60px 40px 30px;
+}
+.sectionparent section .div1 li{
+    color: rgba(0, 0, 0, 0.753);
+}
+.sectionparent section .div1 li:first-child{
+    padding:0 0 10px;
+}
+
+.sectionparent section .div1 li:first-child p:first-child{
+    font-size: 30px;
+    font-weight: bold;
+    padding:0 0 20px;
+}
+
+.sectionparent section .div1 li:first-child p{
+    line-height: 20px;
+    font-size: 15px;
+
+}
+
+.sectionparent section .div1 li:first-child p a{
+    color: dodgerblue;
+    text-decoration: none;
+}
+
+.sectionparent section .div1 li:first-child p a:hover{
+    color: rgb(248, 52, 150);
+}
+
+
+.sectionparent section .div1 li:nth-child(2),
+.sectionparent section .div1 li:nth-child(3){
+    padding: 5px 0;
+    width: 100%;
+}
+
+.sectionparent section .div1 li:nth-child(2) form,
+.sectionparent section .div1 li:nth-child(3) form{
+    position: relative;
+    width: 100%;
+    height: 50px;
+    overflow: hidden;
+}
+
+.sectionparent section .div1 li:nth-child(2) form input,
+.sectionparent section .div1 li:nth-child(3) form input{
+    position: relative;
+    width: 100%;
+    height: 100%;
+    padding: 30px 0 0px 0;
+    border: none;
+    background:none;
+    font-weight: bold;
+    color: rgb(83, 83, 83);
+}
+
+.sectionparent section .div1 li:nth-child(3) form input{
+    letter-spacing: 2px;
+
+}
+
+.sectionparent section .div1 li:nth-child(2) form label,
+.sectionparent section .div1 li:nth-child(3) form label{
+    position: absolute;
+    left: 0%;
+    bottom: 0px;
+    width: 100%;
+    height: 100%;
+    border-bottom: 1.5px solid rgba(165, 164, 164, 0.548);
+    pointer-events: none;
+    font-size: 15px;
+    font-weight: bold;
+    color: rgb(179, 179, 179);
+}
+.sectionparent section .div1 li:nth-child(2) form label:after,
+.sectionparent section .div1 li:nth-child(3) form label:after{
+    position: absolute;
+    content: "";
+    left: 0%;
+    bottom: -2px;
+    width: 100%;
+    height: 2px;
+    background-color: dodgerblue;
+    transform: translateX(-100%);
+    transition: 1s;
+}
+
+.sectionparent section .div1 li:nth-child(2) form input:focus + label::after,
+.sectionparent section .div1 li:nth-child(3) form input:focus + label::after{
+    transform: translateX(0);
+}
+
+.sectionparent section .div1 li:nth-child(2) form label p,
+.sectionparent section .div1 li:nth-child(3) form label p{
+    position: absolute;
+    left: 0%;
+    bottom: 5px;
+    transition: 0.5s;
+
+}
+
+    
+.sectionparent section .div1 li:nth-child(2) form input:focus + label p,
+.sectionparent section .div1 li:nth-child(3) form input:focus + label p,
+.sectionparent section .div1 li:nth-child(2) form input:valid + label p,
+.sectionparent section .div1 li:nth-child(3) form input:valid + label p{
+    transform: translateY(-120%);
+    color:dodgerblue;
+}
+
+.sectionparent section .div1 li:nth-child(2) form label span,
+.sectionparent section .div1 li:nth-child(3) form label span{
+    float: right;
+    transform: translateY(130%);
+    transition: 1s;
+}
+
+.sectionparent section .div1 li:nth-child(2) form input:focus + label span,
+.sectionparent section .div1 li:nth-child(3) form input:focus + label span{
+    color: dodgerblue;
+}
+
+
+.sectionparent section .div1 li:nth-child(4){
+    margin: 30px 0;
+}
+
+.sectionparent section .div1 li:nth-child(4) form{
+    display: inline-flex;
+    font-size: 14px;
+}
+
+.sectionparent section .div1 li:nth-child(4) form input[type="checkbox"]{
+    position: relative;
+    width: 148px;
+    height: 20px;
+    line-height: 20px;
+    background:none;
+    border: none;
+    opacity: 0;
+}
+
+.sectionparent section .div1 li:nth-child(4)  form p {
+    border: 1px solid rgb(163, 163, 163);
+    width: 20px;
+    height: 20px;
+    text-align: center;
+    position: absolute;
+    pointer-events: none;
+    border-radius: 2px;
+}
+
+.sectionparent section .div1 li:nth-child(4)  form p::before{
+    position: absolute;
+    left: 14%;
+    top: 0%;
+    border-top: none;
+    border-right: none;
+    border-left: 3px solid dodgerblue;
+    border-bottom:3px solid dodgerblue;
+    width: 19px;
+    height: 6px;
+    text-align: center;
+    transform: rotate(-50deg);
+
+}
+
+
+.sectionparent section .div1 li:nth-child(4)  form input:checked ~ p::before{
+    content: " ";
+}
+
+
+.sectionparent section .div1 li:nth-child(4)  form h3{
+    position: absolute;
+    height: 20px;
+    line-height: 20px;
+    margin-left: 28px;
+    pointer-events: none;
+    font-size: 13px;
+}
+
+.sectionparent section .div1 li:nth-child(4) a{
+    font-size: 12px;
+    color: rgb(58, 58, 58);
+    float: right;
+    font-weight: bold;
+}
+
+.sectionparent section .div1 li:nth-child(4) a:hover{
+    color: rgb(165, 30, 136);
+    float: right;
+    text-decoration: underline;
+
+}
+
+
+
+.sectionparent section .div1 li:nth-child(5){
+    padding: 15px 0;
+}
+
+.sectionparent section .div1 li:nth-child(5) form input{
+    position: relative;
+    border: none;
+    background: none;
+    padding:12px 30px 8px;
+    background-color: dodgerblue;
+    border-radius: 40px;
+    color: white;
+    font-weight: bold;
+    font-size: 16px;
+    font-family:'serif', Arial, sans-serif;
+    box-shadow: 0px 0px 10px 5px rgba(58, 120, 255, 0.3);
+    transition: 0.5s;
+}
+
+.sectionparent section .div1 li:nth-child(5) form input:active{
+    transform: scale(0.9);
+    box-shadow: 0px 0px 1px 1px rgba(58, 120, 255, 0.3);
+
+}
+
+.sectionparent section .div1 li:nth-child(6){
+    padding: 30px 0;
+    font-weight: bold;
+    font-size: 12px;
+    color: rgb(83, 83, 83);
+}
+.sectionparent section .div1 li:nth-child(6) p{
+    display: inline-flex;
+}
+
+.sectionparent section .div1 li:nth-child(6) p:nth-child(2){
+    float: right;
+
+}
+
+.sectionparent section .div1 li:nth-child(6) p:nth-child(1){
+    float: left;
+    width: 80px;
+    height: 28px;
+    text-align: center;
+    line-height: 28px;
+
+}
+
+
+.sectionparent section .div1 li:nth-child(6) p:nth-child(2) a{
+    margin: 0 5px;
+    color: white;
+
+}
+
+.sectionparent section .div1 li:nth-child(6) p:nth-child(2) i{
+    display: block;
+    width: 60px;
+    height: 28px;
+    text-align: center;
+    line-height: 28px;
+    border-radius: 25px;
+}
+
+
+.sectionparent section .div1 li:nth-child(6) p:nth-child(2) a:nth-child(1) i{
+    background-color: rgb(2, 48, 189);
+}
+.sectionparent section .div1 li:nth-child(6) p:nth-child(2) a:nth-child(2) i{
+    background-color: rgb(66, 181, 248);
+}
+.sectionparent section .div1 li:nth-child(6) p:nth-child(2) a:nth-child(3) i{
+    background-color: rgb(252, 13, 64);
+
+}
+
+
+/* ......................div2....... */
+
+.sectionparent section .div2{
+    width: 100%;
+    height: 100%;
+    position: relative;
+}
+
+.sectionparent section .div2:before{
+    position: absolute;
+    content: " ";
+    height: 100%;
+    width: 100%;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    background: linear-gradient(to right,rgba(252, 118, 207, 0.527), rgba(243, 121, 84, 0.671));
+}
+.sectionparent section .div2 img{
+    width: 100%;
+    height: 100%;
+
+}
+.sectionparent section .div2 nav{
+    position: absolute;
+    top: 30%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    text-align: center; 
+    width: 100%;
+}
+
+.sectionparent section .div2 nav p{
+    color: white;
+    position: relative;
+    font-size: 20px;
+}
+
+.sectionparent section .div2 nav p:first-child{
+    font-size: 35px;
+    padding: 50px;
+}
+
+.sectionparent section .div2 p:first-child:before{
+    position: absolute;
+    content: " ";
+    width: 50px;
+    height: 2px;
+    top: 80%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    background-color: rgb(255, 255, 255);
+}
+
